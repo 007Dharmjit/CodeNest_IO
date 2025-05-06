@@ -1,0 +1,48 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="1024" height="1024" fill="#121212"/>
+    
+    <!-- Glowing Circle -->
+    <circle cx="512" cy="512" r="300" stroke="url(#neonGradient)" stroke-width="24" filter="url(#glow)"/>
+    
+    <!-- Crossed Lines (X Shape) - Smaller Eyes -->
+    <path d="M370 512L430 452" stroke="url(#neonGradient)" stroke-width="20" stroke-linecap="round"/>
+    <path d="M370 512L430 572" stroke="url(#neonGradient)" stroke-width="20" stroke-linecap="round"/>
+    <path d="M654 512L594 452" stroke="url(#neonGradient)" stroke-width="20" stroke-linecap="round"/>
+    <path d="M654 512L594 572" stroke="url(#neonGradient)" stroke-width="20" stroke-linecap="round"/>
+    
+    <!-- Smile Curve (Refined for Accuracy) -->
+    <path d="M400 670Q512 800 624 670" stroke="url(#neonGradient)" stroke-width="22" stroke-linecap="round" fill="transparent"/>
+    <!-- <path d="M420 700Q512 820 604 700" stroke="url(#neonGradient)" stroke-width="16" stroke-linecap="round" fill="transparent"/> -->
+    
+    <!-- Glowing Effect -->
+    <defs>
+        <!-- Neon Gradient -->
+        <linearGradient id="neonGradient" x1="300" y1="512" x2="724" y2="512" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#00FFD1" stop-opacity="0.8"/>
+            <stop offset="0.5" stop-color="#00B3FF" stop-opacity="0.9"/>
+            <stop offset="1" stop-color="#00FFD1" stop-opacity="0.8"/>
+        </linearGradient>
+        
+        <!-- Glow Filter -->
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="15" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        
+        <!-- Additional Glow for Depth -->
+        <filter id="glow2" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="25" result="coloredBlur2"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur2"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    
+    <!-- Apply Additional Glow -->
+    <circle cx="512" cy="512" r="300" stroke="url(#neonGradient)" stroke-width="24" filter="url(#glow2)" opacity="0.6"/>
+</svg>
