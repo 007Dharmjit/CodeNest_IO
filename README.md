@@ -45,24 +45,36 @@ CodeNest.Io/
 ## 📦 Installation Instructions
 
 ### 1. Clone the repository 
-    ```bash
+```bash
     git clone https://github.com/007Dharmjit/CodeNest_IO.git
     cd CodeNest.IO
+```
 
-### 2. Install dependencies(Frontend & Backend)
-    ```bash
+### 2. Install dependencies
+Frontend
+ ```bash
     cd Frontend
     npm install
-    
+```
+ Backend 
+  ```bash
     cd ../Backend
-    npm install 
+    npm install
+```
+
 ### 3. Run the project 
-    ```bash
+Start Frontend
+```bash
     cd Frontend
     npm start
-
+```
+Start Backend
+```bash
     cd ../Backend
     npm run dev
+```
+
+---
 
 📌 Notes
 Make sure you have Node.js and npm installed.
@@ -72,13 +84,17 @@ If using MongoDB, add your connection string in a .env file inside Backend/.
 Example:MONGO_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/CodeNest
 PORT=5000
 
+---
+
 📄 License
 This project is licensed under the MIT License.
 
+---
+
 🙌 Contributing
 Pull requests are welcome! Feel free to fork the repo and submit a PR.
+
+---
+
 📞 Contact
 Created by Dharmjit Chauhan – let's connect!
-
-
-
